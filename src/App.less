@@ -1,0 +1,43 @@
+@img: '~@/images';
+.logo {
+  // background-image: url('@{img}/logo.png');
+  background-size: 100%;
+  width: 200px;
+  height: 60px;
+  padding: 10px;
+  box-sizing: border-box;
+  & > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.alpha {
+  background-image: url('@{img}/alpha.png');
+}
+.file-view {
+  position: relative;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  // width: max(72vh, 720px);
+  // height: max(72vh, 720px);
+
+  & img {
+    object-fit: contain;
+  }
+  &:has(.arco-empty) {
+    height: 300px;
+    width: 300px;
+  }
+  flex: 1;
+}
+.file-view-compare {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+}
